@@ -23,7 +23,7 @@ export default class App extends React.Component {
       var date = new Date();
       this.setState({
         curDate: this.months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear(),
-        curTime: date.getHours() + ":" + date.getMinutes()
+        curTime: ('0' + date.getHours()).slice(-2) + ":" + ('0' + date.getMinutes()).slice(-2)
       })
     }, 1000)
   }

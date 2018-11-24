@@ -15,7 +15,7 @@ export default class Info extends Component {
                         <Row style={styles.center}>
                             <Text style={styles.timeText}>{this.props.screenProps.curTime}</Text>
                         </Row>
-                        <Row>
+                        <Row style={styles.center}>
                             <Text>{this.props.screenProps.minutesLeft} minutes before reminder</Text>
                         </Row>
                     </Grid>

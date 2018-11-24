@@ -14,7 +14,7 @@ module.exports = StyleSheet.create({
         height: '100%'
     },
     dateText: {
-        fontSize: 12,
+        fontSize: 15,
         alignSelf: 'center',
         textAlign: 'center',
     },

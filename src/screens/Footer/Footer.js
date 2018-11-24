@@ -37,13 +37,25 @@ const MainScreenNavigator = createBottomTabNavigator(
               <Icon name="pie" />
               <Text>Info</Text>
             </Button>
-            <Button vertical>
-              <Icon name="navigate" />
-              <Text>Navigate</Text>
+            <Button
+              vertical
+              active={props.navigation.getParam('selectedTab', 'Home') == 'Family'}
+              onPress={() => {
+                props.navigation.setParams({selectedTab: 'Family'});
+                props.navigation.navigate('Family');
+              }}>
+              <Icon name="people" />
+              <Text>Family</Text>
             </Button>
-            <Button vertical>
+            <Button
+              vertical
+              active={props.navigation.getParam('selectedTab', 'Home') == 'Profile'}
+              onPress={() => {
+                props.navigation.setParams({selectedTab: 'Profile'});
+                props.navigation.navigate('Profile');
+              }}>
               <Icon name="person" />
-              <Text>Contact</Text>
+              <Text>Profile</Text>
             </Button>
           </FooterTab>
         </Footer>
